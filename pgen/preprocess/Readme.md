@@ -1,11 +1,12 @@
-# Expected Input format
+#Expected Input format
 
 ```
 # WHILE = 'while' '(' EXPRESSION ')' '{' STATEMENT '}'
 ```
-# Expected Output format
 
-```python
+#Expected Output format
+
+```
 Grammer = {
 	'WHILE': [
 		('while', 't')
@@ -17,5 +18,4 @@ Grammer = {
 		('}', 't')
 	]
 }
-``` 
-
+```
