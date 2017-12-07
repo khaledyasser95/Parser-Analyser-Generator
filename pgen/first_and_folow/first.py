@@ -154,6 +154,7 @@ Grammar = {
 }
 
 compute_First(Grammar)
+
 '''
 #if the non-terminal has an epsilon in the first and there exists non-terminals after this one
                 if None in first[token]:
