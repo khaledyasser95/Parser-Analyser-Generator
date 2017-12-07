@@ -48,6 +48,7 @@ def compute_First(Grammar):
                     first[x].append(token)
                 elif (x in first) and (token not in first[x]):
                     first[x].append(token)
+
             elif type == 'n':
                 if token in first:
                     if x not in first:
