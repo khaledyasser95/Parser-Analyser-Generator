@@ -94,7 +94,7 @@ First = {
     'IF': ['if'],
     'PRIMITIVE_TYPE': ['int', 'float'],
     'DECLARATION': ['int', 'float'],
-    'STATEMENT': ['int', 'float', 'if', 'while', 'id', None],
+    'STATEMENT': ['int', 'float', 'if', 'while', 'id'],
     'STATEMENT_LIST': ['int', 'float', 'if', 'while', 'id', None],
     'METHOD_BODY': ['int', 'float', 'if', 'while', 'id', None]
 }

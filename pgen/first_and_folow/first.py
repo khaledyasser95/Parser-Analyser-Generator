@@ -45,9 +45,9 @@ def compute_First(Grammar):
             if type == 't':
                 if x not in first:
                     first.update({x: []})
-                    first[x].append(token)
+                    first[x] = first[x] + [token]
                 elif (x in first) and (token not in first[x]):
-                    first[x].append(token)
+                    first[x] = first[x] + [token]
 
             elif type == 'n':
                 if token in first:
@@ -56,7 +56,6 @@ def compute_First(Grammar):
                     elif x in first:
                         #this is to add only the first that doesn't exist in first[x] and remove duplicates
                         for z in first[token]:
-                            print("First of token: ", first[token])
                             if z not in first[x]:
                                 first[x] = first[x] + [z]
 
@@ -64,7 +63,7 @@ def compute_First(Grammar):
                     if token != x:
                         first_of_N = compute_first_N(token, Grammar)
                         if first_of_N != -1:
-                            first[x].append(first_of_N)
+                            first[x] = first[x] + first_of_N
                         else:
                             print("Error in NON-TERMINAL ", x, " the NON-TERMINAL ", token, " not in the Grammar")
             print("The first dict: ", first)
