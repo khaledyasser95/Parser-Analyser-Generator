@@ -1,21 +1,30 @@
 #Expected Input format
 
 ```
-# WHILE = 'while' '(' EXPRESSION ')' '{' STATEMENT '}'
+# TERM = FACTOR
+| TERM 'mulop' FACTOR
+# METHOD_BODY = STATEMENT_LIST
 ```
 
 #Expected Output format
 
 ```
 Grammer = {
-	'WHILE': [
-		('while', 't')
-		('(', 't'
-		('EXPRESSION', 'n')
-		(')', 't')
-		('{', 't')
-		('STATEMENT', 'n')
-		('}', 't')
+	'TERM':[
+		[
+			('FACTOR', 'n')
+		],
+		[
+			('TERM', 'n'),
+			('mulop', 't'), 
+			('FACTOR', 'n')
+		]
+	],
+	'METHOD_BODY':[
+		[
+			('STATEMENT_LIST', 'n')
+		]
 	]
+
 }
 ```
