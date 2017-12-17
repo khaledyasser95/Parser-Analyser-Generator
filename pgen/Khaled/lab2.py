@@ -38,6 +38,7 @@ def main():
             raise IOError('Could not find the file {}.'.format(argv[2]))
         pg = get_parser_generator(argv[2])
         pg.print_yaml_ll1_table()
+        pg.print_ll1_sets()
 
     elif len(argv) >= 3 and argv[1] == '-s':
         if not path.exists(argv[2]):
