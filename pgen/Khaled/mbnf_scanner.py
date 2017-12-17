@@ -34,6 +34,7 @@ class MbnfScanner:
         token = ''
         while i < len(file_content):
             c = file_content[i]
+            old = file_content[i]
             if c == ' ' or c == '\t' or c == '\n':
                 if len(token) > 0:
                     tokens.append(self.get_type(token))

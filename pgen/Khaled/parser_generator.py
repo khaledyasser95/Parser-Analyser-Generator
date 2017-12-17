@@ -233,7 +233,7 @@ class ParserGenerator:
 
         # inp_stack = [l for l in w] + ['$']
         inp_stack.append("$")
-        sym_stack = [l for l in self.goal] + ['$']
+        sym_stack = [self.goal] + ['$']
 
         while sym_stack[0] != '$':
             if inp_stack[0] == sym_stack[0]:
