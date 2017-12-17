@@ -16,7 +16,7 @@ class MbnfScanner:
         pass
 
     def get_type(self, lexeme):
-        if lexeme == ';':
+        if lexeme == '%':
             return Token(lexeme=lexeme, type=SEMICOLON)
         elif lexeme == ':':
             return Token(lexeme=lexeme, type=DERIVES)
@@ -39,7 +39,7 @@ class MbnfScanner:
                 if len(token) > 0:
                     tokens.append(self.get_type(token))
                     token = ''
-            elif c == ':' or c == '|' or c == ';':
+            elif c == ':' or c == '|' or c == '%':
                 if len(token) > 0:
                     tokens.append(self.get_type(token))
 

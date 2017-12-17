@@ -247,7 +247,6 @@ class ParserGenerator:
                 symbol = self.sym_to_int[sym_stack[0]]
                 token = self.sym_to_int[inp_stack[0]]
                 new = [x for x in self.parts(self.table[symbol][token])]
-
                 if new == []:
                     return False
                 else:
