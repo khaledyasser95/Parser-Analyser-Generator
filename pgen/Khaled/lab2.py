@@ -45,9 +45,11 @@ def main():
             pg = get_parser_generator(argv[2])
             pg.print_ll1_sets()
 
+
 if __name__ == '__main__':
     try:
         main()
+
     except (IOError, RuntimeError) as e:
         print(e, file=stderr)
         exit(1)

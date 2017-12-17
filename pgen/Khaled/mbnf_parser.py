@@ -94,6 +94,7 @@ class MbnfParser:
 
         for goal in temp:
             self.goal = goal
+        self.goal = self.int_to_sym[0]
 
     def parse(self):
         """
