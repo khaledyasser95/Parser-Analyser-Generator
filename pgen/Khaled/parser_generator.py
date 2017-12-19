@@ -230,8 +230,6 @@ class ParserGenerator:
 
         if len(token) > 0:
             inp_stack.append(token)
-
-        # inp_stack = [l for l in w] + ['$']
         inp_stack.append("$")
         sym_stack = [self.goal] + ['$']
 
